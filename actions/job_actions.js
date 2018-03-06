@@ -8,9 +8,11 @@ import {
   CLEAR_LIKED_JOBS
 } from './types';
 
+import { INDEED_PUBLISHER_ID } from '../credentials';
+
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?';
 const JOB_QUERY_PARAMS = {
-  publisher: '4201738803816157',
+  publisher: INDEED_PUBLISHER_ID,
   format: 'json',
   v: '2',
   latlng: 1,

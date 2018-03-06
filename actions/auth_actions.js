@@ -8,6 +8,8 @@ import {
 } from './types';
 // import App from '../App';
 
+import { FACEBOOK_API_KEY } from '../credentials';
+
 //Asyncstorage lets react save data to phone; save token
 // takes some amount to time to retrieve, returns promise when retrieve and save
 // AsyncStorage.setItem('fb_token', token)
@@ -29,7 +31,7 @@ export const facebookLogin = () => async dispatch => {
 };
 
 const doFacebookLogin = async dispatch => {
-  let { type, token } = await Facebook.logInWithReadPermissionsAsync('151412015554453',
+  let { type, token } = await Facebook.logInWithReadPermissionsAsync(FACEBOOK_API_KEY,
   { permissions: ['public_profile']
 });
   if (type === 'cancel') {

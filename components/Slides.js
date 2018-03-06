@@ -8,7 +8,7 @@ class Slides extends Component {
 renderLastSlide(index) {
   if (index === this.props.data.length - 1) {
     return (
-      <View style={{ width: 250 }}>
+      <View style={{ width: 250, marginTop: 25 }}>
         <SocialIcon
           title='Sign In With Facebook'
           button
